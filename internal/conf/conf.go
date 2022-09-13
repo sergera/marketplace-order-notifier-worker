@@ -66,18 +66,18 @@ func (c *conf) setKafkaPort() {
 }
 
 func (c *conf) setMarketplaceAPIHost() {
-	marketplaceAPIHost := c.hocon.GetString("marketplaceAPI.host")
+	marketplaceAPIHost := c.hocon.GetString("marketplace-api.host")
 	if len(marketplaceAPIHost) == 0 {
-		log.Panic("vendor api host environment variable not found")
+		log.Panic("marketplace api host environment variable not found")
 	}
 
 	c.MarketplaceAPIHost = marketplaceAPIHost
 }
 
 func (c *conf) setMarketplaceAPIPort() {
-	marketplaceAPIPort := c.hocon.GetString("marketplaceAPI.port")
+	marketplaceAPIPort := c.hocon.GetString("marketplace-api.port")
 	if len(marketplaceAPIPort) == 0 {
-		log.Panic("vendor api port environment variable not found")
+		log.Panic("marketplace api port environment variable not found")
 	}
 
 	c.MarketplaceAPIPort = marketplaceAPIPort
